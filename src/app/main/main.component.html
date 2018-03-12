@@ -1,3 +1,11 @@
-<p>
-  main works!
-</p>
+<div>
+    <p>
+        main works!
+    </p>
+    <ul>
+        <button *ngFor="let number of numbers" (click)="selectNumber(number)">
+            {{number}}
+        </button>
+    </ul>
+    <app-input *ngIf="selectedNumber" [number]="selectedNumber"></app-input>
+</div>

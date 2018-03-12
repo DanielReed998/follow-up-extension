@@ -7,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  numbers: string[];
+  selectedNumber: string;
+
   constructor() { }
 
   ngOnInit() {
-    
+    this.numbers = [
+      "one",
+      "two",
+      "three"
+    ];
+  }
+
+  selectNumber(number: string) {
+    this.selectedNumber = number;
   }
 
 }
